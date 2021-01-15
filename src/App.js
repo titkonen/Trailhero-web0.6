@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-// import firebase from './firebase';
 // Graphic assets
 import Trailherologo from './assets/Trailhero-logo-horizontal.png';
 
@@ -14,44 +13,19 @@ import PrivateRoute from "./auth/PrivateRoute";
 
 // Views 
 import WelcomeView from './Views/WelcomeView';
-import AboutView from './Views/AboutView';
 import ContactsView from './Views/ContactsView';
-import TestingView from './Views/TestingView';
 
 function App() {
-
   return (
     <AuthProvider>
     <Router>
       <div>
         <nav className="blue">          
           <img src={Trailherologo} className="logo-trailhero" alt="Hero" />
-
           <ul className="navigation">
-            <li>
-              <Link
-                className="navigation"
-                to="/login">Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                className="navigation"
-                to="/signup">Sign up
-              </Link>
-            </li>
-            {/* <li>
-              <Link
-                className="navigation"
-                to="/about">Privacy Policy
-              </Link>
-            </li> */}
-            <li>
-              <Link
-                className="navigation"
-                to="/contacts">Contacts
-              </Link>
-            </li>
+            <li><Link className="navigation" to="/login">Login</Link></li>
+            <li><Link className="navigation" to="/signup">Sign up</Link></li>
+            <li><Link className="navigation" to="/contacts">Contacts</Link></li>
           </ul>
         </nav>
 
@@ -62,14 +36,8 @@ function App() {
           <Route path="/welcome">
             <Welcome />
           </Route>
-          <Route path="/about">
-            <About />
-          </Route>
           <Route path="/contacts">
             <Contacts />
-          </Route>
-          <Route path="/testing">
-            <Testing />
           </Route>
         </Switch>
 
@@ -99,19 +67,6 @@ function Welcome() {
   );
 }
 
-function About() {
-  return (
-    <div>
-      <div className="header">
-        <h1 className="heading">Privacy Policy</h1>
-        <div className="lightgrey">
-          <AboutView />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function Contacts() {
   return (
     <div>
@@ -119,19 +74,6 @@ function Contacts() {
         <h1 className="heading">Contacts</h1>
         <div className="lightgrey">
           <ContactsView />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Testing() {
-  return (
-    <div>
-      <div className="header">
-        <h1 className="heading">TestingView</h1>
-        <div className="lightgrey">
-          <TestingView />
         </div>
       </div>
     </div>
