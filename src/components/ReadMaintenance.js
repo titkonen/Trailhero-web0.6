@@ -3,7 +3,7 @@ import firebase from '../firebase';
 import { Row, Col } from 'react-bootstrap';
 
 export const ReadMaintenance = ({ maintenanceinfo }) => {
-   const [bikename, setBikeName] = React.useState(maintenanceinfo.name); // name
+   const [bikename, setBikeName] = React.useState(maintenanceinfo.bikename); // name
    const [frontfork, setFrontFork] = React.useState(maintenanceinfo.frontfork); // frontFork
    const [rearshock, setRearShock] = React.useState(maintenanceinfo.rearshock); // rearShock 
 
@@ -61,7 +61,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
          saddle,
          extramemo
       })
-      console.log(frontfork);
+      console.log(bikename);
    }
 
    // Deletes data with identicating right id
