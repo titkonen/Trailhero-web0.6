@@ -1,0 +1,12 @@
+.privacy-textblock {
+   /* background-color: brown; */
+   margin: 64px 0px 0px 0px;
+}
+.contacts-hero-text {
+   margin: 24px 0px 0px 16px;
+   color: #000;
+   font-size: 22px;
+   max-width: 900px;
+   line-height: 30px;
+   padding-bottom: 64px;
+}

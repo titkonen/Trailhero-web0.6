@@ -1,0 +1,38 @@
+.maintenance-modal-body {
+   position: relative;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+   padding: 1rem;
+   /* background-color: khaki; */
+   height: 1190px !important;
+   /* Defines modal height */
+ }
+
+ .container-position {
+  /* margin-left: 100px; */
+  margin-right: 100px;
+  margin-top: 20px;
+ }
+
+ .maintenance-container {
+  background-color: #fff;
+  margin: 40px 40px 40px 0px;
+  border-radius: 8px;
+  padding: 16px;
+ }
+
+ .ml-16 {
+   margin-left: 16px;
+ }
+
+ .ml-40 {
+  margin-left: 40px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
