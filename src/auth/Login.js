@@ -5,7 +5,6 @@ import bikediary from '../assets/Icon-bike-diary.png';
 import infomaintenance from '../assets/Icon-info-maintenance.png';
 import spotstrails from '../assets/Icon-spots-trails.png';
 
-
 import hero from '../assets/hero-web.jpg';
 import { withRouter, Redirect } from "react-router";
 // import app from "./base.js";
@@ -53,11 +52,7 @@ const Login = ({ history }) => {
                <h2 className="login-subheading">Bike data and maintenance application</h2>
          </div>
         
-         <img
-            src={hero}
-            className="hero-img"
-            alt="Hero"
-         />
+         <img src={hero} className="hero-img" alt="Hero" />
         
          <div className="module-container">
             <h1 className="module-title">What is TrailHero?</h1>
@@ -65,9 +60,6 @@ const Login = ({ history }) => {
             Mark down easily your bicycle related data and keep update your bicycle maintenance schedules and task lists.</p>
          </div>
 
-         
-
-      
          <h1 className="module-title">Features</h1>
             <Row>
                <Col> 
@@ -76,7 +68,6 @@ const Login = ({ history }) => {
                      <h4 className="feature-icon-text">Time Tracking</h4>
                   </div>
                </Col>
-
                <Col> 
                   <div className="feature-icons">
                      <img src={bikediary} alt="Bike Diary Icon" className="feature-icon" />
@@ -96,10 +87,6 @@ const Login = ({ history }) => {
                   </div>
                </Col>
             </Row>
-  
-
-
-
       </div>
    );
 };

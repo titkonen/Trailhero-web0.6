@@ -1,0 +1,17 @@
+.bg-dark {
+   background-color: #1800FF!important;
+}
+   
+.navbar-dark .navbar-nav  {
+   color: #fff;
+   font-weight: 700;
+}
+
+/* .nav-link.active {
+   background-color: blueviolet;
+   border-radius: 24px;
+} */
+
+/* .test {
+   color: crimson!important;
+} */
