@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Row, Col } from 'react-bootstrap';
+import '../App.css';
 
 export const ReadMaintenance = ({ maintenanceinfo }) => {
    const [bikename, setBikeName] = React.useState(maintenanceinfo.bikename); // name
@@ -368,7 +369,9 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                <button className="button-update" onClick={onUpdate}>Update</button>
                <button className="button-delete" onClick={onDelete}>Delete</button>
             </Row>
+            
          </div>
+         <div className="bottom-spacer"></div>
       </div>
    )
 }

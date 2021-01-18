@@ -135,68 +135,14 @@ function DiaryData() {
       </Modal>
 
          <ul>
-            {/* <h2 className="subheading">Add bike data</h2>
-            <input
-               value={newBikeDate}
-               className="input"
-               required
-               placeholder="Date"
-               size="10"
-               onChange={(event) => setNewBikeDate(event.target.value)}
-            />
-            <input
-               value={newBikeKM}
-               className="input"
-               required
-               placeholder="Length"
-               size="7"
-               onChange={(event) => setNewBikeKM(event.target.value)}
-            />
-            <input
-               value={newBikeTime}
-               className="input"
-               required
-               placeholder="Time"
-               size="8"
-               onChange={(event) => setNewBikeTime(event.target.value)}
-            />
-            <input
-               value={newBikeRoute}
-               className="input"
-               required
-               placeholder="Route"
-               size="20"
-               onChange={(event) => setNewBikeRoute(event.target.value)}
-            />
-            <input
-               value={newBikeModel}
-               className="input"
-               required
-               placeholder="Bike model"
-               size="20"
-               onChange={(event) => setNewBikeModel(event.target.value)}
-            />
-            <button
-               onClick={onCreate}
-               className="button"
-              
-            >Save</button> */}
-
-        
-
             <h2 className="subheading">Bike data</h2>
-           
             {bikedatas.map(bikedata => (
-               <li
-                  key={bikedata.date}
-                  className="listmarker"
-               >
-                  {/* {bikedata.date} */}
+               <li key={bikedata.date} className="listmarker">
                   <DataInput bikedata={bikedata} />
                </li>
             ))}
          </ul>
-
+         <div className="bottom-spacer">...</div>      
       </div>
    );
 }

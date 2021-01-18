@@ -4,6 +4,7 @@ import timetracking from '../assets/Icon-time-tracking.png';
 import bikediary from '../assets/Icon-bike-diary.png';
 import infomaintenance from '../assets/Icon-info-maintenance.png';
 import spotstrails from '../assets/Icon-spots-trails.png';
+import Footer from "../components/Footer";
 
 import hero from '../assets/hero-web.jpg';
 import { withRouter, Redirect } from "react-router";
@@ -87,6 +88,8 @@ const Login = ({ history }) => {
                   </div>
                </Col>
             </Row>
+            <div className="bottom-spacer"></div>
+            <Footer />
       </div>
    );
 };

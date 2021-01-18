@@ -166,6 +166,11 @@ a:hover {
   margin-right: 8px;
 }
 
+.bottom-spacer {
+  margin-top: 100px;
+}
+
+
 .logo {
   color: #22FFFF;
   margin-left: 16px;

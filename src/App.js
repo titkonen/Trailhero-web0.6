@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Footer from "./components/Footer";
 // Graphic assets
 import Trailherologo from './assets/Trailhero-logo-horizontal.png';
 
@@ -45,10 +46,11 @@ function App() {
           <PrivateRoute exact path="/" component={Home} />
           <Route exact path="/signup" component={SignUp} />
         </div>
-
+        
       </div>
     </Router>
     </AuthProvider>
+    
   );
 }
 
@@ -62,6 +64,7 @@ function Welcome() {
       </div>
       <div>
         <WelcomeView />
+        <Footer />
       </div>
     </div>
   );
@@ -74,6 +77,7 @@ function Contacts() {
         <h1 className="heading">Contacts</h1>
         <div className="lightgrey">
           <ContactsView />
+          <Footer />
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import firebase from '../firebase';
 import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
 
 import './Maintenance.css';
+import '../App.css';
 import { ReadMaintenance } from '../components/ReadMaintenance';
 
 function MaintenanceData() {
@@ -377,7 +378,9 @@ function MaintenanceData() {
                 />
               </li>
             ))}
+          
           </div>
+          
         </div>
         
       </div >

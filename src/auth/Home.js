@@ -4,6 +4,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import './Auth.css';
 import '../App.css';
 import '../components/Navbar.css';
+import Footer from "../components/Footer";
 
 // For Routing
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -71,6 +72,7 @@ function HomeContainer() {
          <h1 className="heading">Home</h1>
          <div className="#">
            <HomeAppGrid />
+           <Footer />
          </div>
        </div>
      </div>
@@ -85,6 +87,7 @@ function BikeDiary() {
        </div>
        <div>
          <DiaryData />
+         <Footer />
        </div>
      </div>
    );
@@ -97,6 +100,7 @@ function Info() {
          <h1 className="heading">Bike Info</h1>
          <div className="#">
            <InfoData />
+           <Footer />
          </div>
        </div>
      </div>
@@ -110,6 +114,7 @@ function Maintenance() {
          <h1 className="heading">Maintenance</h1>
          <div className="#">
            <MaintenanceData />
+           <Footer />
          </div>
        </div>
      </div>
