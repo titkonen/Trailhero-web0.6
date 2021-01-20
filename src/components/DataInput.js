@@ -8,8 +8,6 @@ export const DataInput = ({ bikedata }) => {
    const [route, setRoute] = React.useState(bikedata.route); // Route
    const [bikemodel, setBikemodel] = React.useState(bikedata.bikemodel); // Bikemodel
 
-   // console.log(route);
-
    // Updates data identicating right id and add new updated values.
    const onUpdate = () => {
       const db = firebase.firestore()
@@ -23,53 +21,22 @@ export const DataInput = ({ bikedata }) => {
    }
 
    return (
-      <div>
-         <input 
-            value={date}
-            className="input"
-            placeholder= "Date"
-            size="10"  
-            onChange={(event) => {
-               setDate(event.target.value);
-            }} 
+      <div className="input-wrapper">
+         <input value={date} className="input" placeholder= "Date" size="10"  
+            onChange={(event) => { setDate(event.target.value); }} 
          />
-         <input 
-            value={km} 
-            className="input"
-            placeholder= "Length (km)"
-            size="7" 
-            onChange={(event) => {
-               setKm(event.target.value);
-            }} 
+         <input value={km} className="input" placeholder= "Length (km)" size="7" 
+            onChange={(event) => { setKm(event.target.value); }} 
          />
-         <input 
-            value={time}
-            className="input"
-            placeholder= "Time"
-            size="8" 
-            onChange={(event) => {
-               setTime(event.target.value);
-            }} 
+         <input value={time} className="input" placeholder= "Time" size="8" 
+            onChange={(event) => { setTime(event.target.value); }} 
          />
-         <input 
-            value={route}
-            className="input"
-            placeholder= "Route"
-            size="20" 
-            onChange={(event) => {
-               setRoute(event.target.value);
-            }} 
+         <input value={route} className="input" placeholder= "Route" size="20" 
+            onChange={(event) => { setRoute(event.target.value); }} 
          />
-         <input 
-            value={bikemodel}
-            className="input"
-            placeholder= "Bike model"
-            size="20" 
-            onChange={(event) => {
-               setBikemodel(event.target.value);
-            }} 
+         <input value={bikemodel} className="input" placeholder= "Bike model" size="20" 
+            onChange={(event) => { setBikemodel(event.target.value); }} 
          />
-
          <button className="button-update" onClick={onUpdate}>Update</button>
          <button className="button-delete" onClick={onDelete}>Delete</button>
       </div>  

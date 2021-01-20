@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
-import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
+import { Button, ButtonGroup, Dropdown, DropdownButton, Modal, Container, Row, Col } from 'react-bootstrap';
 
 import { DataInput } from '../components/DataInput';
 // import ShowLoader from '../components/ShowLoader';
@@ -44,14 +44,159 @@ function DiaryData() {
       handleClose();
    };
 
+  // Sorting date in ASC order
+  const sortByAsc = () => {
+    const db = firebase.firestore();
+    return db.collection('bike-data-diary').orderBy('date',"asc").onSnapshot((snapshot) => {
+      const bikeInfo = [];
+      snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+      setBikedatas(bikeInfo);
+    });
+  };
 
+  // Sorting date in DESC order
+  const sortByDesc = () => {
+    const db = firebase.firestore();
+    return db.collection('bike-data-diary').orderBy('date',"desc").onSnapshot((snapshot) => {
+      const bikeInfo = [];
+      snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+      setBikedatas(bikeInfo);
+    });
+  };
+
+    // Sorting km in ASC order
+    const sortKMAsc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('km',"asc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+  
+    // Sorting km in DESC order
+    const sortKMDesc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('km',"desc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+
+    // Sorting time in ASC order
+    const sortTimeAsc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('time',"asc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+  
+    // Sorting time in DESC order
+    const sortTimeDesc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('time',"desc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+
+    // Sorting route in ASC order
+    const sortRouteAsc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('route',"asc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+  
+    // Sorting route in DESC order
+    const sortRouteDesc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('route',"desc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+
+    // Sorting route in ASC order
+    const sortBikemodelAsc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('bikemodel',"asc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+  
+    // Sorting route in DESC order
+    const sortBikemodelDesc = () => {
+      const db = firebase.firestore();
+      return db.collection('bike-data-diary').orderBy('bikemodel',"desc").onSnapshot((snapshot) => {
+        const bikeInfo = [];
+        snapshot.forEach(doc => bikeInfo.push({...doc.data(), id: doc.id }));
+        setBikedatas(bikeInfo);
+      });
+    };
+    
    return (
       <div>
-      <div className="mt-40 ml-40">
-        <Button variant="primary" onClick={handleShow}>
-          Add bike usage data
-        </Button>
-      </div>
+        <div className="mt-40 ml-40">
+          <Button variant="primary" onClick={handleShow}>
+            Add bike usage data
+          </Button>
+        </div>
+
+        <Row>
+          <div className="sorting-wrapper">
+            {[DropdownButton].map((DropdownType, idx) => (
+              <DropdownType
+                as={ButtonGroup} key={idx} id={`dropdown-button-drop-${idx}`} size="sm" className="drowdown-button-date" variant="secondary" title="Date"
+              >
+                <Dropdown.Item  onClick={sortByAsc} eventKey="1">ASC</Dropdown.Item>
+                <Dropdown.Item onClick={sortByDesc} eventKey="2">DESC</Dropdown.Item>
+              </DropdownType>
+            ))}
+            {[DropdownButton].map((DropdownType, idx) => (
+              <DropdownType
+                as={ButtonGroup} key={idx} id={`dropdown-button-drop-${idx}`} size="sm" className="drowdown-button-km" variant="secondary" title="Km"
+              >
+                <Dropdown.Item  onClick={sortKMAsc} eventKey="1">ASC</Dropdown.Item>
+                <Dropdown.Item onClick={sortKMDesc} eventKey="2">DESC</Dropdown.Item>
+              </DropdownType>
+            ))}
+            {[DropdownButton].map((DropdownType, idx) => (
+              <DropdownType
+                as={ButtonGroup} key={idx} id={`dropdown-button-drop-${idx}`} size="sm" className="drowdown-button-time" variant="secondary" title="Time"
+              >
+                <Dropdown.Item  onClick={sortTimeAsc} eventKey="1">ASC</Dropdown.Item>
+                <Dropdown.Item onClick={sortTimeDesc} eventKey="2">DESC</Dropdown.Item>
+              </DropdownType>
+            ))}
+            {[DropdownButton].map((DropdownType, idx) => (
+              <DropdownType
+                as={ButtonGroup} key={idx} id={`dropdown-button-drop-${idx}`} size="sm" className="drowdown-button-route" variant="secondary" title="Route"
+              >
+                <Dropdown.Item  onClick={sortRouteAsc} eventKey="1">ASC</Dropdown.Item>
+                <Dropdown.Item onClick={sortRouteDesc} eventKey="2">DESC</Dropdown.Item>
+              </DropdownType>
+            ))}
+            {[DropdownButton].map((DropdownType, idx) => (
+              <DropdownType
+                as={ButtonGroup} key={idx} id={`dropdown-button-drop-${idx}`} size="sm" className="drowdown-button-route" variant="secondary" title="Bike model"
+              >
+                <Dropdown.Item  onClick={sortBikemodelAsc} eventKey="1">ASC</Dropdown.Item>
+                <Dropdown.Item onClick={sortBikemodelDesc} eventKey="2">DESC</Dropdown.Item>
+              </DropdownType>
+            ))}            
+          </div>
+        </Row>
+
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -135,14 +280,14 @@ function DiaryData() {
       </Modal>
 
          <ul>
-            <h2 className="subheading">Bike data</h2>
+            {/* <h2 className="subheading">Bike data</h2> */}
             {bikedatas.map(bikedata => (
                <li key={bikedata.date} className="listmarker">
                   <DataInput bikedata={bikedata} />
                </li>
             ))}
          </ul>
-         <div className="bottom-spacer">...</div>      
+         <div className="bottom-spacer"></div>      
       </div>
    );
 }

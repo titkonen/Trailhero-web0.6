@@ -6,13 +6,20 @@
  }
 
  .input {
-  margin: 0px 12px 12px 0px;
+  margin: 0px 0px 0px 8px;
   outline: none;
   border: none;
   border-radius: 8px;
   font-size: 13px;
   padding: 8px;
-  box-shadow: 2px 2px 5px #ddd;
+  background-color: #eee;
+  /* box-shadow: 2px 2px 5px #ddd; */
+}
+
+.input-wrapper {
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
  .button-update {

@@ -9,3 +9,32 @@
 .mt-40 {
    margin-top: 40px;
 }
+
+
+.sorting-wrapper {
+   background-color: #d2d2d2;
+   border-radius: 8px;
+   margin: 36px 8px 8px 54px;
+   width: 846px;
+   padding: 8px;
+ }
+
+.drowdown-button-date {
+   padding: 0px 46px 0px 0px;
+}
+
+.drowdown-button-km {
+   padding: 0px 32px 0px 0px;
+}
+
+.drowdown-button-time {
+   padding: 0px 30px 0px 0px;
+}
+
+.drowdown-button-route {
+   padding: 0px 120px 0px 0px;
+}
+
+.drowdown-button-bikemodel {
+   padding: 0px 46px 0px 0px;
+}
