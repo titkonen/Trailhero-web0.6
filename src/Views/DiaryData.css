@@ -12,7 +12,7 @@
 
 
 .sorting-wrapper {
-   background-color: #d2d2d2;
+   background-color: #fff;
    border-radius: 8px;
    margin: 36px 8px 8px 54px;
    width: 846px;
@@ -37,4 +37,32 @@
 
 .drowdown-button-bikemodel {
    padding: 0px 46px 0px 0px;
+}
+
+@media only screen and (max-width: 414px) {
+   .sorting-wrapper {
+      background-color: #fff;
+      margin: 12px 0px 8px 12px;
+    }
+
+    .drowdown-button-date {
+      padding: 0px 4px 0px 0px;
+   }
+
+   .drowdown-button-km {
+      padding: 0px 4px 0px 0px;
+   }
+
+   .drowdown-button-time {
+      padding: 0px 4px 0px 0px;
+   }
+
+   .drowdown-button-route {
+      padding: 0px 4px 0px 0px;
+   }
+
+   .drowdown-button-bikemodel {
+      padding: 0px 4px 0px 0px;
+   }
+
 }

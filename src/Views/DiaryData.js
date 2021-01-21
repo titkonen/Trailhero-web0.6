@@ -2,9 +2,9 @@ import React from 'react';
 import firebase from '../firebase';
 import { Button, ButtonGroup, Dropdown, DropdownButton, Modal, Container, Row, Col } from 'react-bootstrap';
 
-import { DataInput } from '../components/DataInput';
+import { ReadBikeDiary } from '../components/ReadBikeDiary';
 // import ShowLoader from '../components/ShowLoader';
-import '../components/DataInput.css';
+import '../components/ReadBikeDiary.css';
 import '../App.css';
 import './DiaryData.css';
 
@@ -206,7 +206,7 @@ function DiaryData() {
           
           <Container className="container-style">
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6} >
                 <label className="labelname">Date</label><br></br>
                 <input
                   value={newBikeDate}
@@ -217,7 +217,7 @@ function DiaryData() {
                   onChange={(event) => setNewBikeDate(event.target.value)}
                 />
               </Col>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6}>
                 <label className="labelname">Km</label><br></br>
                 <input
                   value={newBikeKM}
@@ -230,7 +230,7 @@ function DiaryData() {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6}>
                 <label className="labelname">Time</label><br></br>
                 <input
                   value={newBikeTime}
@@ -241,7 +241,7 @@ function DiaryData() {
                   onChange={(event) => setNewBikeTime(event.target.value)}
                 />
               </Col>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6}>
                 <label className="labelname">Route</label><br></br>
                 <input
                   value={newBikeRoute}
@@ -254,7 +254,7 @@ function DiaryData() {
               </Col>
             </Row>
             <Row>
-               <Col xs={12} md={6}>
+               <Col xs={6} md={6}>
                   <label className="labelname">Bike Model</label><br></br>
                   <input
                      value={newBikeModel}
@@ -283,7 +283,7 @@ function DiaryData() {
             {/* <h2 className="subheading">Bike data</h2> */}
             {bikedatas.map(bikedata => (
                <li key={bikedata.date} className="listmarker">
-                  <DataInput bikedata={bikedata} />
+                  <ReadBikeDiary bikedata={bikedata} />
                </li>
             ))}
          </ul>
