@@ -26,8 +26,8 @@ const Home = () => {
                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav variant="pills" className="mr-auto">
-                     <LinkContainer to="/"><Nav.Link className="test">Home</Nav.Link></LinkContainer>
-                     <LinkContainer to="/bikediary"><Nav.Link>Time Tracking OFF</Nav.Link></LinkContainer>
+                     <LinkContainer to="/home"><Nav.Link>Home</Nav.Link></LinkContainer>
+                     <LinkContainer to="/timetracking"><Nav.Link>Time Tracking OFF</Nav.Link></LinkContainer>
                      <LinkContainer to="/bikediary"><Nav.Link>Bike Diary</Nav.Link></LinkContainer>
                      <LinkContainer to="/maintenance"><Nav.Link>Maintenance</Nav.Link></LinkContainer>
                      <LinkContainer to="/notes"><Nav.Link>Notes</Nav.Link></LinkContainer>
@@ -52,12 +52,31 @@ const Home = () => {
             </nav> */}
             {/* SWITCHER */}
             <Switch>
-               <Route exact path="/"><HomeContainer /></Route>
+               {/* <Route exact path="/"><HomeContainer /></Route> */}
+               <Route path="/home"><HomeContainer /></Route>
                <Route path="/bikediary"><BikeDiary /></Route>
                <Route path="/info"><Info /></Route>
                <Route path="/maintenance"><Maintenance /></Route>
                <Route path="/notes"><NotesData /></Route>
             </Switch>
+
+            <div>
+              
+            {/* <nav className="app-navigation">
+               <ul className="sub-navigation-links">
+                  <li><Link className="#" to="/">Home</Link></li>
+                  <li><Link className="#" to="/bikediary">Time Tracking</Link></li>
+                  <li><Link className="#" to="/bikediary">Bike Diary</Link></li>
+                  <li><Link className="#" to="/maintenance">Maintenance</Link></li>
+                  <li><Link className="#" to="/notes">Notes</Link></li>
+                  <li><Link className="#" to="/info">Info</Link></li>
+                  <li><Link className="#" onClick={() => firebase.auth().signOut()}>Log out</Link></li>
+               </ul>
+            </nav> */}
+            
+            
+            
+            </div>
          </div>
       </Router>
    );
@@ -69,7 +88,7 @@ function HomeContainer() {
    return (
      <div>
        <div className="header">
-         <h1 className="heading">Home</h1>
+         <h1 className="heading">Home1</h1>
          <div className="#">
            <HomeAppGrid />
            <Footer />
