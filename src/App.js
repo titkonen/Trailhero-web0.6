@@ -23,11 +23,11 @@ function App() {
       <div>
         <nav className="blue">          
           <img src={Trailherologo} className="logo-trailhero" alt="Hero" />
-          <ul className="navigation">
+          {/* <ul className="navigation">
             <li><Link className="navigation" to="/login">Login</Link></li>
             <li><Link className="navigation" to="/signup">Sign up</Link></li>
             <li><Link className="navigation" to="/contacts">Contacts</Link></li>
-          </ul>
+          </ul> */}
         </nav>
 
         <Switch>
