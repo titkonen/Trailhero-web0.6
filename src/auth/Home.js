@@ -7,7 +7,7 @@ import '../components/Navbar.css';
 import Footer from "../components/Footer";
 
 // For Routing
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { LinkContainer } from 'react-router-bootstrap'
 
 // Views 
