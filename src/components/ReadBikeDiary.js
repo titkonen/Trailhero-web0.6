@@ -1,8 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
 import './ReadBikeDiary.css';
-import { Container } from 'react-bootstrap';
-
 
 export const ReadBikeDiary = ({ bikedata }) => {
    const [date, setDate] = React.useState(bikedata.date); // Date 

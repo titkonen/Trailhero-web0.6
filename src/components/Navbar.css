@@ -9,6 +9,9 @@
 .navbar-dark .navbar-nav  {
    color: #fff;
    font-weight: 700;
+   text-align: center;
+   padding: 22px;
+   line-height: 2;
 }
 
 /* .nav-link.active {

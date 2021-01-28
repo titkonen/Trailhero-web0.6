@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Trailherologo from './assets/Trailhero-logo-horizontal.png';
 
 // For Auth imports
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./auth/Home";
 import Login from "./auth/Login";
 import SignUp from "./auth/SignUp";
