@@ -206,22 +206,22 @@ function DiaryData() {
           
           <Container className="container-style">
             <Row>
-              <Col xs={6} md={6} >
+              <Col xs={4} md={6} >
                 <label className="labelname">Date</label><br></br>
                 <input
                   value={newBikeDate}
-                  className="input"
+                  className="input input-bikemodel-date"
                   required
                   placeholder="2020-08-01"
                   size="20"
                   onChange={(event) => setNewBikeDate(event.target.value)}
                 />
               </Col>
-              <Col xs={6} md={6}>
-                <label className="labelname">Km</label><br></br>
+              <Col xs={3} md={6}>
+                <label className="labelname labelname-km">Km</label><br></br>
                 <input
                   value={newBikeKM}
-                  className="input"
+                  className="input input-bikemodel-km"
                   required
                   placeholder="Km"
                   size="20"
@@ -230,7 +230,7 @@ function DiaryData() {
               </Col>
             </Row>
             <Row>
-              <Col xs={6} md={6}>
+              <Col xs={4} md={6}>
                 <label className="labelname">Time</label><br></br>
                 <input
                   value={newBikeTime}
@@ -241,11 +241,11 @@ function DiaryData() {
                   onChange={(event) => setNewBikeTime(event.target.value)}
                 />
               </Col>
-              <Col xs={6} md={6}>
+              <Col xs={12} md={6}>
                 <label className="labelname">Route</label><br></br>
                 <input
                   value={newBikeRoute}
-                  className="input"
+                  className="input input-bikemodel-mobile"
                   required
                   placeholder="Route"
                   size="20"
@@ -254,11 +254,11 @@ function DiaryData() {
               </Col>
             </Row>
             <Row>
-               <Col xs={6} md={6}>
+               <Col xs={12} md={6}>
                   <label className="labelname">Bike Model</label><br></br>
                   <input
                      value={newBikeModel}
-                     className="input"
+                     className="input input-bikemodel-mobile"
                      required
                      placeholder="Bike Model"
                      size="20"

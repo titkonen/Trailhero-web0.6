@@ -40,6 +40,25 @@
 }
 
 @media only screen and (max-width: 414px) {
+
+   .input-bikemodel-date {
+      margin: 0 20px 0 0;
+      width: 120px!important;
+   }
+
+   .input-bikemodel-km {
+      margin: 0 0px 0 20px;
+      width: 120px!important;
+   }
+
+   .input-bikemodel-mobile {
+      width: 340px!important;
+   }
+
+   .labelname-km {
+      padding-left: 20px;
+   }
+
    .sorting-wrapper {
       background-color: #fff;
       margin: 12px 0px 8px 12px;

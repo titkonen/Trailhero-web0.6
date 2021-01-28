@@ -9,3 +9,9 @@
    color: white;
    text-align: center;
 }
+
+@media only screen and (max-width: 414px) {
+   .footer {
+      display: none;
+   }
+}
