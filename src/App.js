@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 // Graphic assets
 import Trailherologo from './assets/Trailhero-logo-horizontal.png';
 
@@ -13,8 +13,8 @@ import { AuthProvider } from './auth/Auth';
 import PrivateRoute from "./auth/PrivateRoute";
 
 // Views 
-import WelcomeView from './Views/WelcomeView';
-import ContactsView from './Views/ContactsView';
+// import WelcomeView from './Views/WelcomeView';
+// import ContactsView from './Views/ContactsView';
 
 function App() {
   return (
@@ -34,12 +34,12 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/welcome">
+          {/* <Route path="/welcome">
             <Welcome />
           </Route>
           <Route path="/contacts">
             <Contacts />
-          </Route>
+          </Route> */}
         </Switch>
 
         <div>
@@ -56,30 +56,30 @@ function App() {
 
 export default App;
 
-function Welcome() {
-  return (
-    <div>
-      <div className="header">
-      <h1 className="heading">Welcome</h1>
-      </div>
-      <div>
-        <WelcomeView />
-        <Footer />
-      </div>
-    </div>
-  );
-}
+// function Welcome() {
+//   return (
+//     <div>
+//       <div className="header">
+//       <h1 className="heading">Welcome</h1>
+//       </div>
+//       <div>
+//         <WelcomeView />
+//         {/* <Footer /> */}
+//       </div>
+//     </div>
+//   );
+// }
 
-function Contacts() {
-  return (
-    <div>
-      <div className="header">
-        <h1 className="heading">Contacts</h1>
-        <div className="lightgrey">
-          <ContactsView />
-          <Footer />
-        </div>
-      </div>
-    </div>
-  );
-}
+// function Contacts() {
+//   return (
+//     <div>
+//       <div className="header">
+//         <h1 className="heading">Contacts</h1>
+//         <div className="lightgrey">
+//           <ContactsView />
+//           <Footer />
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
