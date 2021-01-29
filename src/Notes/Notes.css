@@ -1,19 +1,9 @@
-/* .logo {
-   margin: 32px;
-} */
- 
- /* .heading {
-   margin: 32px;
-   color: #eee;
-   padding-left: 6px;
- } */
-
- .notes-header {
+.notes-header {
    margin-top: -30px;
    height: 120px;
    width: 100%;
    background-color: #1800FF; 
- }
+}
  
  .button {
    background: #1E88E5;
@@ -101,7 +91,8 @@
    border: none;
    border-radius: 8px;
    font-size: 18px;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: avenir, Arial, Helvetica, sans-serif;
+   font-weight: 500;
    padding: 10px;
    resize: none;
  }
@@ -124,9 +115,7 @@
  .grid-container {
    display: inline-grid;
    grid-template-columns: auto auto auto;
-   /* background-color: #2196F3; */
-   padding: 20px;
-   padding-left: 40px;
+   padding: 20px 20px 20px 40px;
  }
  
  .grid-item {
@@ -135,4 +124,20 @@
    /* padding: 20px; */
  }
  
+ @media only screen and (max-width: 414px) {
+  .grid-container {
+     padding: 8px 8px 8px 16px;
+  }
+
+  .note-wrapper {
+    width: 180px;
+  }
+
+  .note {
+    width: 180px;
+    font-size: 16px;
+    font-family: avenir, Arial, Helvetica, sans-serif;
+
+  }
+}
  

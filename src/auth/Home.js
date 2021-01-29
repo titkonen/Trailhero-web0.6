@@ -89,7 +89,7 @@ function HomeContainer() {
    return (
      <div>
        <div className="header">
-         <h1 className="heading">Home1</h1>
+         <h1 className="heading">Home</h1>
          <div className="#">
            <HomeAppGrid />
            <Footer />

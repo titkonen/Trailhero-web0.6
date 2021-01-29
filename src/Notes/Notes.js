@@ -1,8 +1,9 @@
 import React from 'react';
 import './Notes.css';
 import firebase from '../firebase';
-import {NoteInput} from './NoteInput';
+import NoteInput from './NoteInput';
 import Footer from '../components/Footer';
+// import { Container, Row, Col } from 'react-bootstrap';
 
 function NotesData() {
   const [notes, setNotes] = React.useState([])
@@ -38,6 +39,16 @@ function NotesData() {
       </ul>  
 
       {notes.map(note => (
+        // <Container fluid>
+        // <Row>
+        //   <Col xs={3} sm={3} md={3} lg={3}  >
+        //     <div className="grid-container" key={note.text}>
+        //       <div class="grid-item"><NoteInput note={note} /></div>
+        //     </div>
+        //   </Col>
+        // </Row>
+        // </Container>
+
           <div className="grid-container" key={note.text}>
             <div class="grid-item"><NoteInput note={note} /></div>
           </div>

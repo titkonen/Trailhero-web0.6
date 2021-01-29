@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 import './Notes.css';
 
-export const NoteInput = ({ note }) => {
+const NoteInput = ({ note }) => {
    const [text, setText] = React.useState(note.text);
 
 
@@ -45,3 +45,5 @@ export const NoteInput = ({ note }) => {
    </>   
    )
 }
+
+export default NoteInput;
