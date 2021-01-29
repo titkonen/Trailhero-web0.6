@@ -1,8 +1,8 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Row, Col } from 'react-bootstrap';
-import '../Views/Views.css';
 import '../Views/Info.css';
+// import '../Views/Views.css';
 
 export const ReadBikeBasicInfo = ({ basicinfo }) => {
    const [serialnumber, setSerialnumber] = React.useState(basicinfo.serialnumber); // serialnumber 
@@ -33,7 +33,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
             </Row>
             
             <Row>
-               <Col xs={6} sm={3}>
+               <Col xs={12} sm={3}>
                   <label className="labelname">Bike model</label><br></br>
                   <input
                      value={model}
@@ -45,7 +45,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={12} sm={3}>
                   <label className="labelname">Serial number</label><br></br>
                   <input
                      value={serialnumber}
@@ -58,7 +58,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                   />
                </Col>
            
-               <Col xs={6} sm={3}>
+               <Col xs={12} sm={3}>
                   <label className="labelname">Purchase Date</label><br></br>
                   <input
                      value={purchasedate}
@@ -70,7 +70,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={12} sm={3}>
                   <label className="labelname">Purchase Place</label><br></br>
                   <input
                      value={purchaseplace}

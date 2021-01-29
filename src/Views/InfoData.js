@@ -1,8 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
-
-
 import './Info.css';
 import './Views.css';
 import { ReadBikeBasicInfo } from '../components/ReadBikeBasicInfo';
@@ -49,7 +47,6 @@ function InfoData() {
 
   return (
     <div>
-      {/* <h2 className="subheading-info">Add new bike information</h2> */}
       <div className="mt-60 mb-72 info-container-button">
         <Button variant="primary" onClick={handleShow}>
           Add bike information
@@ -70,7 +67,7 @@ function InfoData() {
         </Modal.Header>
         <Modal.Body className="show-grid">
           
-          <Container className="container-style">
+          <Container className="#">
             <Row>
               <Col xs={12} md={6}>
                 <label className="labelname">Bike model</label><br></br>
@@ -146,9 +143,6 @@ function InfoData() {
         </Modal.Footer>
       </Modal>
 
-
-    
-
       <div className="#">
         <div className="read-list-info">
 
@@ -160,8 +154,6 @@ function InfoData() {
 
         </div>
       </div>
-
-
     </div>
   );
 }
