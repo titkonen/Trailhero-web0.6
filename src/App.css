@@ -6,14 +6,20 @@ body {
   margin: 24px;
 }
 
-/* .container {
-  background: #333;
-  width: 40vw;
-  margin: 10em auto;
+.container {
+  background: #eee;
+  width: 100%;
+  /* margin: 10em auto; */
   border-radius: 8px;
   padding: 20px 10px;
-  color: #EBDEF0;
-} */
+  color: #000;
+}
+
+.container-style {
+  /* background-color: tomato; */
+  /* top: -160px; */
+  position: inherit;
+}
 
 .header {
   margin-top: -30px;
@@ -72,7 +78,6 @@ body {
   margin-top: 5px;
 }
 
-
 li {
   float: left;
 }
@@ -97,8 +102,6 @@ a:hover {
   padding-top: 50px;
   /* float: right; */
 }
-
-
 
 .module-title {
   text-align: left;
@@ -139,8 +142,6 @@ a:hover {
   padding-bottom: 32px;
   padding-top: 32px;
 }
-
-
 
 /* SPACING */
 
@@ -210,8 +211,6 @@ a:hover {
   font-size: 13px;
   padding: 8px;
   background-color: #eee;
-  /* box-shadow: 2px 2px 5px #ddd; */
-  
 }
 
 .listmarker {
