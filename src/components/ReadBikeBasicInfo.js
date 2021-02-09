@@ -1,15 +1,14 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Row, Col } from 'react-bootstrap';
+import '../App.css';
 import '../Views/Info.css';
-// import '../Views/Views.css';
 
 export const ReadBikeBasicInfo = ({ basicinfo }) => {
    const [serialnumber, setSerialnumber] = React.useState(basicinfo.serialnumber); // serialnumber 
    const [purchasedate, setPurchasedate] = React.useState(basicinfo.purchasedate); // purchasedate 
    const [purchaseplace, setPurchaseplace] = React.useState(basicinfo.purchaseplace); // purchaseplace 
    const [extramemo, setExtramemo] = React.useState(basicinfo.extramemo); // extramemo 
-
    const [model, setModel] = React.useState(basicinfo.model); // model 
 
    // Updates data identicating right id and add new updated values.
@@ -27,7 +26,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
    return (
       <div>
          
-         <div className="info-container">
+         <div className="table-container">
             <Row>
                <h2 className="info-container-title">Bike basic information</h2>
             </Row>
@@ -98,7 +97,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
               </Col>
             </Row>
             <button className="button-update" onClick={onUpdate}>Update</button>
-            <button className="button-info-delete" onClick={onDelete}>Delete</button>
+            <button className="button-delete" onClick={onDelete}>Delete</button>
          </div>
 
 

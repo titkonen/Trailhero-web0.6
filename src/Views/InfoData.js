@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
 import './Info.css';
-import './Views.css';
+import '../App.css';
 import { ReadBikeBasicInfo } from '../components/ReadBikeBasicInfo';
 
 function InfoData() {

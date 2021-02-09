@@ -1,18 +1,25 @@
-body {
-  background-color: lightblue;
-}
+/* BRAND ELEMENTS */
 
 .logo-trailhero {
   margin: 24px;
 }
 
-.container {
-  background: #eee;
-  width: 100%;
-  /* margin: 10em auto; */
-  border-radius: 8px;
-  padding: 20px 10px;
+.logo {
+  color: #22FFFF;
+  margin-left: 16px;
+  background-color: #ccc; 
+  margin-top: -1px;
+  padding-top: 20px;
+}
+
+/* CONTAINERS */
+
+.table-container {
   color: #000;
+  background-color: #fff;
+  margin: 0px 40px 40px 40px;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 .container-style {
@@ -39,30 +46,12 @@ body {
   margin-top: 0px;
 }
 
-/* NOT IN USE */
-.app-bg {
-  background-color: #fff;
-  /* width: 300px; */
-  border-radius: 16px;
-  /* height: 300px; */
-  padding: 32px;
-  margin: 0px 8px 0px 8px;
-  box-shadow: 2px 2px 30px #bbb;
-} 
-
 .sub-navigation-links {
-  /* background-color: #1E88E5; */
   list-style-type: none;
   text-decoration: none;
   font-weight: bold;
   color: white;
   float: right;
-  /* margin-top: -30px; */
-}
-
-.lightgrey {
-  background-color: #eee; 
-  margin-top: -140px;
 }
 
 .add-bikedata {
@@ -82,16 +71,6 @@ li {
   float: left;
 }
 
-a {
-  display: block;
-  padding: 16px;
-}
-
-a:hover {
-  display: block;
-  color: #1E88E5;
-  text-decoration: none;
-}
 
 /* TEXT STYLING */
 
@@ -100,7 +79,6 @@ a:hover {
   color: white;
   font-size: 42px;
   padding-top: 50px;
-  /* float: right; */
 }
 
 .module-title {
@@ -162,29 +140,44 @@ a:hover {
 }
 
 
-.logo {
-  color: #22FFFF;
-  margin-left: 16px;
-  background-color: #ccc; 
-  margin-top: -1px;
-  padding-top: 20px;
-  /* float: right; */
-}
+
 
 /* BUTTONS */
+.primary-button-styling {
+  margin: 40px 40px 60px 40px;
+  /* background-color: aqua; */
+}
 
-.button {
-  background: #1E88E5;
-  border-radius: 8px;
-  margin: 24px 24px;
-  padding: 8px 8px;
-  width: 72px;
-  font-size: 16px;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  color: white;
-  box-shadow: 2px 2px 5px #aaa;
+.secondary-button-position {
+  background-color: brown;
+
+  /* margin: 40px 40px 60px 40px; */
+  /* background-color: aqua; */
+}
+
+.button-blue {
+  color: #1E88E5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button-red {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.button-update {
+  color: #1E88E5;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.button-delete {
+  color: red;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .button:hover {
@@ -196,19 +189,33 @@ a:hover {
   margin: 24px 24px;
 }
 
-.button-simple {
-  color: #1E88E5;
-  background-color: transparent;
-  border-width: 0px;
-  cursor: pointer;
+/* TABLELIST */
+.tablelist-bg {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 800px;
+  padding: 12px 12px 0px 12px;
+  margin: 20px 0px 0px 40px;
 }
+
+/* OTHER */
 
 .input {
   margin: 0px 12px 12px 0px;
   outline: none;
   border: none;
   border-radius: 8px;
-  font-size: 13px;
+  font-size: 14px;
+  padding: 8px;
+  background-color: #eee;
+}
+
+.input-number {
+  margin: 0px 12px 12px 0px;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
   padding: 8px;
   background-color: #eee;
 }
@@ -245,4 +252,34 @@ a:hover {
   flex: 50%;
 }
 
+.center {
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
 
+.spinner-style {
+  margin: auto;
+}
+
+.read-list {
+  margin-top: -120px;
+  /* margin-bottom: 0px;
+  background-color: lightpink; */
+}
+
+@media only screen and (max-width: 414px) { 
+
+  .tablelist-bg {
+    margin: 8px;
+  }
+
+  .input {
+    width: 190px;
+  }
+
+  .input-number {
+    width: 30px;
+  }
+
+}
