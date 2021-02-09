@@ -17,7 +17,7 @@
 .table-container {
   color: #000;
   background-color: #fff;
-  margin: 40px;
+  margin: 40px 20px 20px 0px;
   border-radius: 8px;
   padding: 16px;
 }
@@ -122,6 +122,9 @@ li {
 }
 
 /* SPACING */
+.ml-40 {
+  margin-left: 40px;
+}
 
 .ml-16 {
   margin-left: 16px;
@@ -139,20 +142,13 @@ li {
   margin-top: 100px;
 }
 
-
-
-
 /* BUTTONS */
 .primary-button-styling {
   margin: 40px 40px 60px 40px;
-  /* background-color: aqua; */
 }
 
 .secondary-button-position {
   background-color: brown;
-
-  /* margin: 40px 40px 60px 40px; */
-  /* background-color: aqua; */
 }
 
 .button-blue {
@@ -167,26 +163,8 @@ li {
   font-weight: 600;
 }
 
-
-.button-update {
-  color: #1E88E5;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.button-delete {
-  color: red;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.button:hover {
-  opacity: 0.8;
-}
-
-.button-style {
-  padding: 8px 8px;
-  margin: 24px 24px;
+.crud-buttons {
+  margin: 0px 0px 0px 16px;
 }
 
 /* TABLELIST */
@@ -232,18 +210,6 @@ li {
   /* top: -4px; */
 }
 
-/* .column {
-  float: left;
-  width: 50%;
-} */
-
-/* Clear floats after the columns */
-/* .row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
-
 .row {
   display: flex;
 }
@@ -264,8 +230,6 @@ li {
 
 .read-list {
   margin-top: -120px;
-  /* margin-bottom: 0px;
-  background-color: lightpink; */
 }
 
 @media only screen and (max-width: 414px) { 
@@ -280,6 +244,10 @@ li {
 
   .input-number {
     width: 30px;
+  }
+
+  .table-container {
+    margin: 40px 0px 0px -40px;
   }
 
 }

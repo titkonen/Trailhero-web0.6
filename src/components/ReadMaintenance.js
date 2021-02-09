@@ -73,7 +73,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
 
    return (
       <div>
-         <div className="maintenance-container">
+         <div className="table-container">
             <h2 className="#">Bike components</h2>
             <Row>
                <Col xs={12}>
@@ -352,7 +352,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                </Col>
             </Row>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={12} sm={12} md={12}>
                 <label className="labelname">Additional info</label><br></br>
                   <textarea 
                     name="info" 
@@ -366,10 +366,10 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
               </Col>
             </Row>
             <Row>
-               {/* <button className="button-update" onClick={onUpdate}>Update</button> */}
-               <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
-               <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
-               {/* <button className="button-delete" onClick={onDelete}>Delete</button> */}
+               <div className="#">
+                  <Button className="crud-buttons button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
+                  <Button className="crud-buttons button-red" variant="light" onClick={onDelete}>DELETE</Button>
+               </div>
             </Row>
             
          </div>

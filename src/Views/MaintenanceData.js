@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
 
-import './Maintenance.css';
+// import './Maintenance.css';
 import '../App.css';
 import { ReadMaintenance } from '../components/ReadMaintenance';
 

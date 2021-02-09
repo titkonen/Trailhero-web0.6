@@ -26,7 +26,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
    return (
       <div>
          
-         <div className="table-container">
+         <div className="ml-40 table-container">
             <Row>
                <h2 className="info-container-title">Bike basic information</h2>
             </Row>
