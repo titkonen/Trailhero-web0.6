@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import '../App.css';
 import '../Views/Info.css';
 
@@ -96,8 +96,8 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                   ></textarea>
               </Col>
             </Row>
-            <button className="button-update" onClick={onUpdate}>Update</button>
-            <button className="button-delete" onClick={onDelete}>Delete</button>
+            <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
+            <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
          </div>
 
 

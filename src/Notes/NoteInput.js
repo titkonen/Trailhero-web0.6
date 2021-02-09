@@ -1,10 +1,10 @@
 import React from 'react';
 import firebase from '../firebase';
 import './Notes.css';
+import { Button } from 'react-bootstrap';
 
 const NoteInput = ({ note }) => {
    const [text, setText] = React.useState(note.text);
-
 
    const onUpdate = () => {
       const db = firebase.firestore()
@@ -16,14 +16,7 @@ const NoteInput = ({ note }) => {
       db.collection('notes').doc(note.id).delete()
    }
 
-   return (<>
-      {/* <input 
-         value={text} 
-         className="note"
-         onChange={(event) => {
-            setText(event.target.value);
-         }} 
-      /> */}
+   return (
       <div className="note-wrapper">
          <textarea
             value={text} 
@@ -38,11 +31,11 @@ const NoteInput = ({ note }) => {
  
          </textarea>
          <br></br>
-         <button className="button-edit" onClick={onUpdate}>Update</button>
-     
-         <button className="button-delete-notes" onClick={onDelete}>Delete</button>
+         {/* <button className="button-edit" onClick={onUpdate}>Update</button> */}
+         <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
+         <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
+         {/* <button className="button-delete-notes" onClick={onDelete}>Delete</button> */}
       </div>
-   </>   
    )
 }
 

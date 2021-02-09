@@ -5,70 +5,6 @@
    background-color: #1800FF; 
 }
  
- .button {
-   background: #1E88E5;
-   border-radius: 8px;
-   margin: 0px 5px;
-   padding: 4px 8px;
-   border: none;
-   cursor: pointer;
-   color: white;
-   font-size: 18px;
-   width: 96px;
-   height: 42px;
-   transition-duration: 0.4s;
- }
- 
- .button:hover {
-   background-color: #1E88E5; 
-   opacity: 0.7; 
-   color: white;
- }
- 
- 
- .button-delete {
-   color: red;
-   float: right;
-   background: transparent !important;
-   border: none;
-   padding: 8px;
-   padding-right: 16px;
-   font-size: 14px;
-   transition-duration: 0.4s;
-   /* margin-top: 1px; */
- }
-
- .button-delete-notes {
-   color: red;
-   float: right;
-   background: transparent !important;
-   border: none;
-   padding: 8px;
-   padding-right: 16px;
-   font-size: 14px;
-   transition-duration: 0.4s;
-   margin-top: 1px;
- }
- 
- .button-delete:hover {
-   color: #000;
- }
- 
- .button-edit {
-   color: #1E88E5;
-   float: left;
-   background: transparent !important;
-   border: none;
-   padding: 8px;
-   font-size: 14px;
-   padding-left: 16px;
- }
- 
- .button-edit:hover {
-   color: #000;
- }
- 
- 
  .input-style  {
    margin: 0em 2em 1em 0px;
    margin-top: 60px;
@@ -76,8 +12,8 @@
    outline: none;
    border: none;
    border-radius: 8px;
-   font-size: 18px;
-   padding: 10px;
+   font-size: 16px;
+   padding: 8px;
  }
 
  .status-complete {
@@ -98,7 +34,7 @@
  }
  
  .note-wrapper {
-   background-color: #FCE8AD;
+   background-color: #fff;
    width: 220px;
    height: 170px;
    outline: none;
@@ -116,12 +52,6 @@
    display: inline-grid;
    grid-template-columns: auto auto auto;
    padding: 20px 20px 20px 40px;
- }
- 
- .grid-item {
-   /* background-color: rgba(255, 255, 255, 0.8); */
-   /* border: 1px solid rgba(0, 0, 0, 0.8); */
-   /* padding: 20px; */
  }
  
  @media only screen and (max-width: 414px) {

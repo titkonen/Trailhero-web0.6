@@ -2,8 +2,7 @@ import React from 'react';
 import './Notes.css';
 import firebase from '../firebase';
 import NoteInput from './NoteInput';
-import Footer from '../components/Footer';
-// import { Container, Row, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 function NotesData() {
   const [notes, setNotes] = React.useState([])
@@ -35,7 +34,8 @@ function NotesData() {
           placeholder="Note text"
           onChange={(event) => setNewNoteText(event.target.value)} 
         />
-        <button onClick={onCreate} className="button">Add</button>
+        {/* <button onClick={onCreate} className="button">Add</button> */}
+        <Button onClick={onCreate} variant="primary">Add</Button>
       </ul>  
 
       {notes.map(note => (
@@ -53,7 +53,7 @@ function NotesData() {
             <div class="grid-item"><NoteInput note={note} /></div>
           </div>
         ))}
-      <Footer />
+  
     </div>   
   );
 }

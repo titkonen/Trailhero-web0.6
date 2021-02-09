@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from '../firebase';
 import './ReadBikeDiary.css';
+import { Button } from 'react-bootstrap';
 
 export const ReadBikeDiary = ({ bikedata }) => {
    const [date, setDate] = React.useState(bikedata.date); // Date 
@@ -40,8 +41,10 @@ export const ReadBikeDiary = ({ bikedata }) => {
             <input value={bikemodel} className="bikediary-input" placeholder= "Bike model" size="20" 
                onChange={(event) => { setBikemodel(event.target.value); }} 
             />
-            <button className="bikediary-button-update" onClick={onUpdate}>Update</button>
-            <button className="bikediary-button-delete" onClick={onDelete}>Delete</button>
+            {/* <button className="bikediary-button-update" onClick={onUpdate}>Update</button> */}
+            <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
+            <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
+            {/* <button className="bikediary-button-delete" onClick={onDelete}>Delete</button> */}
          {/* </Container> */}
       </div>  
       

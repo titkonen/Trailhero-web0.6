@@ -1,6 +1,6 @@
 import React from 'react';
 import firebase from '../firebase';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import '../App.css';
 
 export const ReadMaintenance = ({ maintenanceinfo }) => {
@@ -366,8 +366,10 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
               </Col>
             </Row>
             <Row>
-               <button className="button-update" onClick={onUpdate}>Update</button>
-               <button className="button-delete" onClick={onDelete}>Delete</button>
+               {/* <button className="button-update" onClick={onUpdate}>Update</button> */}
+               <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
+               <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
+               {/* <button className="button-delete" onClick={onDelete}>Delete</button> */}
             </Row>
             
          </div>
