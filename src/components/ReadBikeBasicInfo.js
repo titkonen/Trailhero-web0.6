@@ -25,12 +25,10 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
 
    return (
       <div>
-         
          <div className="ml-40 table-container">
             <Row>
                <h2 className="info-container-title">Bike basic information</h2>
             </Row>
-            
             <Row>
                <Col xs={12} sm={3}>
                   <label className="labelname">Bike model</label><br></br>
@@ -56,7 +54,6 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                      }}
                   />
                </Col>
-           
                <Col xs={12} sm={3}>
                   <label className="labelname">Purchase Date</label><br></br>
                   <input
@@ -99,29 +96,6 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
             <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
             <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
    )
 }

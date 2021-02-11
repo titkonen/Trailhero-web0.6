@@ -23,30 +23,19 @@ export const ReadBikeDiary = ({ bikedata }) => {
    }
 
    return (
-      
       <div className="bikediary-input-wrapper">
-         {/* <Container className="input-wrapper"> */}
             <input value={date} className="bikediary-input" placeholder= "Date" size="10"  
-               onChange={(event) => { setDate(event.target.value); }} 
-            />
+               onChange={(event) => { setDate(event.target.value); }} />
             <input value={km} className="bikediary-input" placeholder= "Length (km)" size="7" 
-               onChange={(event) => { setKm(event.target.value); }} 
-            />
+               onChange={(event) => { setKm(event.target.value); }} />
             <input value={time} className="bikediary-input" placeholder= "Time" size="8" 
-               onChange={(event) => { setTime(event.target.value); }} 
-            />
+               onChange={(event) => { setTime(event.target.value); }} />
             <input value={route} className="bikediary-input" placeholder= "Route" size="20" 
-               onChange={(event) => { setRoute(event.target.value); }} 
-            />
+               onChange={(event) => { setRoute(event.target.value); }} />
             <input value={bikemodel} className="bikediary-input" placeholder= "Bike model" size="20" 
-               onChange={(event) => { setBikemodel(event.target.value); }} 
-            />
-            {/* <button className="bikediary-button-update" onClick={onUpdate}>Update</button> */}
+               onChange={(event) => { setBikemodel(event.target.value); }} />
             <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
             <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
-            {/* <button className="bikediary-button-delete" onClick={onDelete}>Delete</button> */}
-         {/* </Container> */}
       </div>  
-      
    )
 }

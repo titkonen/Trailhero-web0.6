@@ -34,26 +34,13 @@ function NotesData() {
           placeholder="Note text"
           onChange={(event) => setNewNoteText(event.target.value)} 
         />
-        {/* <button onClick={onCreate} className="button">Add</button> */}
         <Button onClick={onCreate} variant="primary">Add</Button>
       </ul>  
-
       {notes.map(note => (
-        // <Container fluid>
-        // <Row>
-        //   <Col xs={3} sm={3} md={3} lg={3}  >
-        //     <div className="grid-container" key={note.text}>
-        //       <div class="grid-item"><NoteInput note={note} /></div>
-        //     </div>
-        //   </Col>
-        // </Row>
-        // </Container>
-
           <div className="grid-container" key={note.text}>
-            <div class="grid-item"><NoteInput note={note} /></div>
+            <div className="grid-item"><NoteInput note={note} /></div>
           </div>
         ))}
-  
     </div>   
   );
 }

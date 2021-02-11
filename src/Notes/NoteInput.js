@@ -1,12 +1,17 @@
 import React from 'react';
 import firebase from '../firebase';
 import './Notes.css';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Col, Toast } from 'react-bootstrap';
+// import ShowToaster from '../components/ShowToaster';
 
 const NoteInput = ({ note }) => {
    const [text, setText] = React.useState(note.text);
+   const [isLoaded, setIsLoaded] = React.useState(false);
+   const [show, setShow] = React.useState(true);
 
    const onUpdate = () => {
+      setIsLoaded(true);
+      setShow(true);
       const db = firebase.firestore()
       db.collection('notes').doc(note.id).set({ ...note, text })
    }
@@ -16,25 +21,31 @@ const NoteInput = ({ note }) => {
       db.collection('notes').doc(note.id).delete()
    }
 
+   const ShowToaster2 = () => {
+      return (
+        <Row>
+          <Col xs={6}>
+            <Toast 
+               style={{ position: 'relative', top: 0, right: 0, width: 200 }}
+               onClose={() => setShow(false)} show={show} delay={700} autohide>
+              <Toast.Body>Updated</Toast.Body>
+            </Toast>
+          </Col>
+        </Row>
+      );
+   }
+
    return (
       <div className="note-wrapper">
          <textarea
-            value={text} 
-            className="note" 
-            rows="4" 
-            
-            cols="30"
-            onChange={(event) => {
-               setText(event.target.value);
-            }} 
-         >
- 
+            value={text} className="note" rows="4" cols="30"
+            onChange={(event) => {setText(event.target.value); }} >
          </textarea>
-         <br></br>
-         {/* <button className="button-edit" onClick={onUpdate}>Update</button> */}
+
+         { isLoaded && <div> <ShowToaster2 /> </div> }
+
          <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
          <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
-         {/* <button className="button-delete-notes" onClick={onDelete}>Delete</button> */}
       </div>
    )
 }
