@@ -1,8 +1,8 @@
 import React from 'react';
 import firebase from '../firebase';
-import { Row, Col, Button } from 'react-bootstrap';
+import { Row, Col, Button, Toast } from 'react-bootstrap';
 import '../App.css';
-import '../Views/Info.css';
+import './Info.css';
 
 export const ReadBikeBasicInfo = ({ basicinfo }) => {
    const [serialnumber, setSerialnumber] = React.useState(basicinfo.serialnumber); // serialnumber 
@@ -10,9 +10,13 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
    const [purchaseplace, setPurchaseplace] = React.useState(basicinfo.purchaseplace); // purchaseplace 
    const [extramemo, setExtramemo] = React.useState(basicinfo.extramemo); // extramemo 
    const [model, setModel] = React.useState(basicinfo.model); // model 
+   const [isLoaded, setIsLoaded] = React.useState(false);
+   const [show, setShow] = React.useState(true);
 
    // Updates data identicating right id and add new updated values.
    const onUpdate = () => {
+      setIsLoaded(true);
+      setShow(true);
       const db = firebase.firestore()
       db.collection('bike-basic-info').doc(basicinfo.id).set({ ...basicinfo, serialnumber, purchasedate, purchaseplace, extramemo, model })
    }
@@ -21,6 +25,18 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
    const onDelete = () => {
       const db = firebase.firestore()
       db.collection('bike-basic-info').doc(basicinfo.id).delete()
+   }
+
+   const ShowToaster = () => {
+      return (
+        <Row>
+          <Col xs={6}>
+            <Toast className="toast-style" onClose={() => setShow(false)} show={show} delay={700} autohide>
+              <Toast.Body>Updated</Toast.Body>
+            </Toast>
+          </Col>
+        </Row>
+      );
    }
 
    return (
@@ -95,6 +111,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
             </Row>
             <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
             <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
+            { isLoaded && <div> <ShowToaster /> </div> }
          </div>
       </div>
    )

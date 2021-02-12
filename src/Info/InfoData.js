@@ -3,7 +3,7 @@ import firebase from '../firebase';
 import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
 import './Info.css';
 import '../App.css';
-import { ReadBikeBasicInfo } from '../components/ReadBikeBasicInfo';
+import { ReadBikeBasicInfo } from './ReadBikeBasicInfo';
 
 function InfoData() {
   const [basicinfos, setBasicInfos] = React.useState([])
@@ -17,11 +17,6 @@ function InfoData() {
   const [show, setShow] = React.useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-  //Spinner Const's
-  // const [spinner, setSpinner] = React.useState(false);
-  // const spinnerClose = () => setSpinner(false);
-  // const spinnerShow = () => setSpinner(true);
 
   // Bike Basic info 
   React.useEffect(() => {

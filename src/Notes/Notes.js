@@ -22,6 +22,7 @@ function NotesData() {
     db.collection('notes').add({ 
       text: newNoteText
     });
+    setNewNoteText('');
   }
 
   return (

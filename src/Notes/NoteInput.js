@@ -3,7 +3,6 @@ import firebase from '../firebase';
 import './Notes.css';
 import '../App.css';
 import { Button, Row, Col, Toast } from 'react-bootstrap';
-// import ShowToaster from '../components/ShowToaster';
 
 const NoteInput = ({ note }) => {
    const [text, setText] = React.useState(note.text);
@@ -22,7 +21,7 @@ const NoteInput = ({ note }) => {
       db.collection('notes').doc(note.id).delete()
    }
 
-   const ShowToaster2 = () => {
+   const ShowToaster = () => {
       return (
         <Row>
           <Col xs={6}>
@@ -42,7 +41,7 @@ const NoteInput = ({ note }) => {
          </textarea>
          <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
          <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
-         { isLoaded && <div> <ShowToaster2 /> </div> }
+         { isLoaded && <div> <ShowToaster /> </div> }
       </div>
    )
 }

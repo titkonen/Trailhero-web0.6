@@ -12,7 +12,7 @@ import { LinkContainer } from 'react-router-bootstrap'
 
 // Views 
 import MaintenanceData from '../Views/MaintenanceData';
-import InfoData from '../Views/InfoData';
+import InfoData from '../Info/InfoData';
 import DiaryData from '../Views/DiaryData';
 import NotesData from '../Notes/Notes';
 import HomeAppGrid from '../Views/HomeAppGrid';

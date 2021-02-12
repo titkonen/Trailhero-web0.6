@@ -31,6 +31,8 @@ function Spots() {
      ridingTime: ridingTime
    });
    handleClose();
+   setNewSpot('');
+   setRidingTime('');
  }
 
   return (
@@ -66,7 +68,7 @@ function Spots() {
                   value={ridingTime}
                   className="input"
                   required
-                  placeholder="Spot name"
+                  placeholder="Riding time"
                   size="20"
                   onChange={(event) => setRidingTime(event.target.value)}
                 />
