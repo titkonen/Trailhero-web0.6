@@ -102,7 +102,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                     name="info" 
                     rows="5" 
                     cols="53"
-                    className="input"
+                    className="textarea-style"
                     value={extramemo}
                     placeholder="Additional info"
                     onChange={(event) => setExtramemo(event.target.value)}

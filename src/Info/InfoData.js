@@ -42,26 +42,17 @@ function InfoData() {
 
   return (
     <div>
-      <div className="mt-60 mb-72 info-container-button">
+      <div className="primary-button-styling">
         <Button variant="primary" onClick={handleShow}>
           Add bike information
         </Button>
-
-        {/* <Button 
-          variant="secondary"
-          onClick={ShowLoader}
-        >
-          ShowLoader
-        </Button> */}
       </div>
-
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Bike basic information</Modal.Title>
         </Modal.Header>
         <Modal.Body className="show-grid">
-          
           <Container className="#">
             <Row>
               <Col xs={12} md={6}>
@@ -118,7 +109,7 @@ function InfoData() {
                     name="info" 
                     rows="5" 
                     cols="53"
-                    className="input"
+                    className="textarea-style"
                     value={newExtraMemo}
                     placeholder="Additional info"
                     onChange={(event) => setNewExtraMemo(event.target.value)}

@@ -31,8 +31,6 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
    const [saddle, setSaddle] = React.useState(maintenanceinfo.saddle); // saddle
    const [extramemo, setExtramemo] = React.useState(maintenanceinfo.extramemo); // extramemo 
 
-   console.log('Read Maintenance 18-8');
-
    // Updates data identicating right id and add new updated values.
    const onUpdate = () => {
       const db = firebase.firestore()
@@ -62,7 +60,6 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
          saddle,
          extramemo
       })
-      console.log(bikename);
    }
 
    // Deletes data with identicating right id
@@ -76,7 +73,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
          <div className="table-container">
             <h2 className="#">Bike components</h2>
             <Row>
-               <Col xs={12}>
+               <Col xs={12} sm={12} md={12}>
                   <label className="labelname">Bike Name</label><br></br>
                   <input
                      value={bikename}
@@ -371,7 +368,6 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                   <Button className="crud-buttons button-red" variant="light" onClick={onDelete}>DELETE</Button>
                </div>
             </Row>
-            
          </div>
          <div className="bottom-spacer"></div>
       </div>

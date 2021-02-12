@@ -1,10 +1,8 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Button, ButtonGroup, Dropdown, DropdownButton, Modal, Container, Row, Col } from 'react-bootstrap';
-
-import { ReadBikeDiary } from '../components/ReadBikeDiary';
-// import ShowLoader from '../components/ShowLoader';
-import '../components/ReadBikeDiary.css';
+import { ReadBikeDiary } from './ReadBikeDiary';
+import './ReadBikeDiary.css';
 import '../App.css';
 import './DiaryData.css';
 
@@ -146,9 +144,9 @@ function DiaryData() {
     
    return (
       <div>
-        <div className="mt-40 ml-40">
+        <div className="primary-button-styling">
           <Button variant="primary" onClick={handleShow}>
-            Add bike usage data
+            Add bike data
           </Button>
         </div>
 

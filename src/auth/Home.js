@@ -11,9 +11,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { LinkContainer } from 'react-router-bootstrap'
 
 // Views 
-import MaintenanceData from '../Views/MaintenanceData';
+import MaintenanceData from '../Maintenance/MaintenanceData';
 import InfoData from '../Info/InfoData';
-import DiaryData from '../Views/DiaryData';
+import DiaryData from '../Diary/DiaryData';
 import NotesData from '../Notes/Notes';
 import HomeAppGrid from '../Views/HomeAppGrid';
 import Spots from '../Spots/Spots';

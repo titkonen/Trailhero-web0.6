@@ -1,10 +1,9 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Button, Modal, Container, Row, Col } from 'react-bootstrap';
-
-// import './Maintenance.css';
+import './Maintenance.css';
 import '../App.css';
-import { ReadMaintenance } from '../components/ReadMaintenance';
+import { ReadMaintenance } from './ReadMaintenance';
 
 function MaintenanceData() {
   const [maintenanceinfos, setMaintenanceinfos] = React.useState([])
@@ -86,7 +85,7 @@ function MaintenanceData() {
   return (
     <div>
 
-      <div className="mt-60 ml-40">
+      <div className="primary-button-styling">
         <Button variant="primary" onClick={handleShow}>
           Add bike components
         </Button>
@@ -347,7 +346,7 @@ function MaintenanceData() {
                     name="info" 
                     rows="5" 
                     cols="53"
-                    className="input"
+                    className="textarea-style"
                     value={newExtraMemo}
                     placeholder="Additional info"
                     onChange={(event) => setNewExtraMemo(event.target.value)}

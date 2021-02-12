@@ -17,7 +17,7 @@
 .table-container {
   color: #000;
   background-color: #fff;
-  margin: 40px 20px 20px 0px;
+  margin: 0px 20px 20px 0px;
   border-radius: 8px;
   padding: 16px;
 }
@@ -144,7 +144,7 @@ li {
 
 /* BUTTONS */
 .primary-button-styling {
-  margin: 40px 40px 60px 40px;
+  margin: 50px 40px 60px 40px;
 }
 
 .secondary-button-position {
