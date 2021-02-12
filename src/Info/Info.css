@@ -30,3 +30,13 @@
 .read-list-info {
   margin-top: -30px;
 }
+
+@media only screen and (max-width: 414px) {
+  .textarea-style {
+    width: 350px;
+  }
+
+  .modal-body { 
+    height: 500px;
+  }
+} 

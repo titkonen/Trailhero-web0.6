@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from '../firebase';
 import { Row, Col, Button, Toast } from 'react-bootstrap';
+import '../App.css';
 
 export const ReadSpots = ({ basicspot}) => {
    const [name, setName] = React.useState(basicspot.name); // Spot name 
@@ -36,7 +37,7 @@ export const ReadSpots = ({ basicspot}) => {
 
    return (
       <div>
-         <div className="tablelist-bg"> 
+         <div className="table-container"> 
             <Row>
                <Col xs={6} sm={6} md={6}>
                   <input value={name} className="input" placeholder="Spot name" size="40"

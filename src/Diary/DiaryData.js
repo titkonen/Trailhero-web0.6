@@ -150,8 +150,8 @@ function DiaryData() {
           </Button>
         </div>
 
-        <Row>
-          <div className="sorting-wrapper">
+        {/* <Row> */}
+          <div className="table-container">
             {[DropdownButton].map((DropdownType, idx) => (
               <DropdownType
                 as={ButtonGroup} key={idx} id={`dropdown-button-drop-${idx}`} size="sm" className="drowdown-button-date" variant="secondary" title="Date"
@@ -193,7 +193,7 @@ function DiaryData() {
               </DropdownType>
             ))}            
           </div>
-        </Row>
+        {/* </Row> */}
 
 
       <Modal show={show} onHide={handleClose}>
@@ -277,14 +277,13 @@ function DiaryData() {
         </Modal.Footer>
       </Modal>
 
-         <ul>
-            {/* <h2 className="subheading">Bike data</h2> */}
+         <div>
             {bikedatas.map(bikedata => (
                <li key={bikedata.date} className="listmarker">
                   <ReadBikeDiary bikedata={bikedata} />
                </li>
             ))}
-         </ul>
+         </div>
          <div className="bottom-spacer"></div>      
       </div>
    );

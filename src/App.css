@@ -17,7 +17,7 @@
 .table-container {
   color: #000;
   background-color: #fff;
-  margin: 0px 20px 20px 0px;
+  margin: 0px 16px 8px 16px;
   border-radius: 8px;
   padding: 16px;
 }
@@ -198,6 +198,20 @@ li {
   background-color: #eee;
 }
 
+.input-heading {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.textarea-style {
+  background-color: #ff00cc;
+  width: 420px;
+  border-radius: 8px;
+  font-size: 14px;
+  padding: 8px;
+  border: none;
+}
+
 .listmarker {
   list-style-type: none;
 }
@@ -242,6 +256,21 @@ li {
   width: 90px
 }
 
+@media only screen and (max-width: 736px) { 
+  .table-container { 
+    width: 710px;
+  }
+
+  .input {
+    width: 150px;
+  }
+
+  .input-heading {
+    width: 240px;
+  }
+
+}
+
 @media only screen and (max-width: 414px) { 
 
   .tablelist-bg {
@@ -249,7 +278,11 @@ li {
   }
 
   .input {
-    width: 190px;
+    width: 160px;
+  }
+
+  .input-heading {
+    width: 270px;
   }
 
   .input-number {
@@ -257,7 +290,13 @@ li {
   }
 
   .table-container {
-    margin: 40px 0px 0px -40px;
+    width: 390px;
+    margin: 8px 16px 0px 16px;
+  }
+
+  .listmarker {
+    list-style-type: none;
+    margin-left: 0px;
   }
 
 }

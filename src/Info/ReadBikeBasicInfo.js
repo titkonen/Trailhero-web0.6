@@ -41,12 +41,12 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
 
    return (
       <div>
-         <div className="ml-40 table-container">
+         <div className="table-container">
             <Row>
                <h2 className="info-container-title">Bike basic information</h2>
             </Row>
             <Row>
-               <Col xs={12} sm={3}>
+               <Col xs={6} sm={6}>
                   <label className="labelname">Bike model</label><br></br>
                   <input
                      value={model}
@@ -58,7 +58,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={12} sm={3}>
+               <Col xs={6} sm={6}>
                   <label className="labelname">Serial number</label><br></br>
                   <input
                      value={serialnumber}
@@ -70,7 +70,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={12} sm={3}>
+               <Col xs={6} sm={6}>
                   <label className="labelname">Purchase Date</label><br></br>
                   <input
                      value={purchasedate}
@@ -82,7 +82,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={12} sm={3}>
+               <Col xs={6} sm={6}>
                   <label className="labelname">Purchase Place</label><br></br>
                   <input
                      value={purchaseplace}
@@ -96,7 +96,7 @@ export const ReadBikeBasicInfo = ({ basicinfo }) => {
                </Col>
             </Row>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={12} md={12}>
                 <label className="labelname">Additional info</label><br></br>
                   <textarea 
                     name="info" 

@@ -69,35 +69,34 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
    }
 
    return (
-      <div>
-         <div className="table-container">
+      <div className="table-container">
             <h2 className="#">Bike components</h2>
             <Row>
                <Col xs={12} sm={12} md={12}>
                   <label className="labelname">Bike Name</label><br></br>
                   <input
                      value={bikename}
-                     className="input"
+                     className="input input-heading"
                      placeholder="Bike name"
-                     size="40"
+                     size="80"
                      onChange={(event) => {
                         setBikeName(event.target.value);
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Front fork</label><br></br>
                   <input
                      value={frontfork}
                      className="input"
                      placeholder="Front fork"
-                     size="20"
+                
                      onChange={(event) => {
                         setFrontFork(event.target.value);
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Rear shock</label><br></br>
                   <input
                      value={rearshock}
@@ -109,7 +108,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Front wheel</label><br></br>
                   <input
                      value={frontwheel}
@@ -121,7 +120,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Rear wheel</label><br></br>
                   <input
                      value={rearwheel}
@@ -135,7 +134,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                </Col>
             </Row>
             <Row>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}> 
                   <label className="labelname">Front tire</label><br></br>
                   <input
                      value={fronttire}
@@ -147,7 +146,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Rear tire</label><br></br>
                   <input
                      value={reartire}
@@ -159,7 +158,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Front brake</label><br></br>
                   <input
                      value={frontbrake}
@@ -171,7 +170,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Rear brake</label><br></br>
                   <input
                      value={rearbrake}
@@ -185,7 +184,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                </Col>
             </Row>
             <Row>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Rear derailleur</label><br></br>
                   <input
                      value={rearderailleur}
@@ -197,7 +196,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Shifters</label><br></br>
                   <input
                      value={shifters}
@@ -209,7 +208,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Crankset</label><br></br>
                   <input
                      value={crankset}
@@ -221,7 +220,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Cassette</label><br></br>
                   <input
                      value={cassette}
@@ -235,7 +234,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                </Col>
             </Row>
             <Row>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Chain</label><br></br>
                   <input
                      value={chain}
@@ -247,7 +246,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Bottom Bracket</label><br></br>
                   <input
                      value={bottombracket}
@@ -259,7 +258,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Headset</label><br></br>
                   <input
                      value={headset}
@@ -271,7 +270,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                      }}
                   />
                </Col>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                   <label className="labelname">Bars</label><br></br>
                   <input
                      value={bars}
@@ -285,7 +284,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                </Col>
             </Row>
             <Row>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                      <label className="labelname">Brake Rotors</label><br></br>
                      <input
                         value={brakerotors}
@@ -297,7 +296,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                         }}
                      />
                </Col>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                      <label className="labelname">Stem</label><br></br>
                      <input
                         value={stem}
@@ -309,7 +308,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                         }}
                      />
                </Col>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                      <label className="labelname">Grips</label><br></br>
                      <input
                         value={grips}
@@ -321,7 +320,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                         }}
                      />
                </Col>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                      <label className="labelname">Seatpost</label><br></br>
                      <input
                         value={seatpost}
@@ -335,7 +334,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                </Col>
             </Row>
             <Row>
-               <Col xs={6} sm={6} md={3}>
+               <Col xs={6} sm={3} md={3}>
                      <label className="labelname">Saddle</label><br></br>
                      <input
                         value={saddle}
@@ -355,7 +354,7 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                     name="info" 
                     rows="5" 
                     cols="53"
-                    className="input"
+                    className="textarea-style"
                     value={extramemo}
                     placeholder="Additional info"
                     onChange={(event) => setExtramemo(event.target.value)}
@@ -368,8 +367,6 @@ export const ReadMaintenance = ({ maintenanceinfo }) => {
                   <Button className="crud-buttons button-red" variant="light" onClick={onDelete}>DELETE</Button>
                </div>
             </Row>
-         </div>
-         <div className="bottom-spacer"></div>
       </div>
    )
 }

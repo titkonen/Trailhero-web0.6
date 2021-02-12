@@ -55,7 +55,7 @@ function InfoData() {
         <Modal.Body className="show-grid">
           <Container className="#">
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={12}>
                 <label className="labelname">Bike model</label><br></br>
                 <input
                   value={newBikeModel}
@@ -66,7 +66,7 @@ function InfoData() {
                   onChange={(event) => setNewBikeModel(event.target.value)}
                 />
               </Col>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6}>
                 <label className="labelname">Serial number</label><br></br>
                 <input
                   value={newSerialNumber}
@@ -79,7 +79,7 @@ function InfoData() {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6}>
                 <label className="labelname">Purchase Date</label><br></br>
                 <input
                   value={newPurchaseDate}
@@ -90,7 +90,7 @@ function InfoData() {
                   onChange={(event) => setNewPurchaseDate(event.target.value)}
                 />
               </Col>
-              <Col xs={12} md={6}>
+              <Col xs={6} md={6}>
                 <label className="labelname">Purchase Place</label><br></br>
                 <input
                   value={newPurchasePlace}
@@ -103,7 +103,7 @@ function InfoData() {
               </Col>
             </Row>
             <Row>
-              <Col xs={12} md={6}>
+              <Col xs={12} md={12}>
                 <label className="labelname">Additional info</label><br></br>
                   <textarea 
                     name="info" 

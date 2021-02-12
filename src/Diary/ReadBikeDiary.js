@@ -2,6 +2,7 @@ import React from 'react';
 import firebase from '../firebase';
 import './ReadBikeDiary.css';
 import { Button } from 'react-bootstrap';
+import '../App.css';
 
 export const ReadBikeDiary = ({ bikedata }) => {
    const [date, setDate] = React.useState(bikedata.date); // Date 
@@ -21,9 +22,9 @@ export const ReadBikeDiary = ({ bikedata }) => {
       const db = firebase.firestore()
       db.collection('bike-data-diary').doc(bikedata.id).delete()
    }
-
+// bikediary-input-wrapper
    return (
-      <div className="bikediary-input-wrapper">
+      <div className="table-container"> 
             <input value={date} className="bikediary-input" placeholder= "Date" size="10"  
                onChange={(event) => { setDate(event.target.value); }} />
             <input value={km} className="bikediary-input" placeholder= "Length (km)" size="7" 
