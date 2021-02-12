@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from '../firebase';
 import './Notes.css';
+import '../App.css';
 import { Button, Row, Col, Toast } from 'react-bootstrap';
 // import ShowToaster from '../components/ShowToaster';
 
@@ -25,9 +26,7 @@ const NoteInput = ({ note }) => {
       return (
         <Row>
           <Col xs={6}>
-            <Toast 
-               style={{ position: 'relative', top: 0, right: 0, width: 200 }}
-               onClose={() => setShow(false)} show={show} delay={700} autohide>
+            <Toast className="toast-style" onClose={() => setShow(false)} show={show} delay={700} autohide>
               <Toast.Body>Updated</Toast.Body>
             </Toast>
           </Col>
@@ -41,11 +40,9 @@ const NoteInput = ({ note }) => {
             value={text} className="note" rows="4" cols="30"
             onChange={(event) => {setText(event.target.value); }} >
          </textarea>
-
-         { isLoaded && <div> <ShowToaster2 /> </div> }
-
          <Button className="button-blue" variant="light" onClick={onUpdate}>UPDATE</Button>
          <Button className="button-red" variant="light" onClick={onDelete}>DELETE</Button>
+         { isLoaded && <div> <ShowToaster2 /> </div> }
       </div>
    )
 }
